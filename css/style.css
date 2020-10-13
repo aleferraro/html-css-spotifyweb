@@ -1,0 +1,50 @@
+/* LAYOUT SETTINGS */
+
+#sidebar {
+  background-color: #000000;
+  height: calc(100% - 100px);
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#main {
+  background-color: #141922;
+  width: calc(100% - 200px);
+  height: calc(100% - 100px);
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+
+#music-player {
+  background-color: #282828;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #sidebar {
+    width: 50px;
+  }
+
+  #main {
+    width: calc(100% - 50px);
+    left: 50px;
+  }
+
+}
+
+/* USEFUL PROPERTIES */
+
+.grey {
+  color: #707070;
+}
+
+.white {
+  color: white;
+}
