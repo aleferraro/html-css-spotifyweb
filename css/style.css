@@ -152,6 +152,10 @@ a {
   color: white;
 }
 
+.playlist li > a:hover .button {
+  background-color: white;
+}
+
 .header-sidebar {
   position: relative;
   height: calc(100% - 75px);
@@ -179,6 +183,10 @@ a {
   width: 15px;
   margin-right: 5px;
   vertical-align: middle;
+}
+
+.download:hover a {
+  color: white;
 }
 
 .profile {
@@ -216,6 +224,10 @@ a {
   margin-right: 20px;
 }
 
+#main-window .upgrade .cta:hover {
+  transform: scale(1.2);
+}
+
 #main-window .playground {
   margin-top: 85px;
 }
@@ -230,6 +242,17 @@ a {
   margin: 0 10px;
 }
 
+#main-window .playground .menu > li:hover a {
+  color: white;
+}
+
+#main-window .playground .menu .green-underline {
+  height: 3px;
+  width: 40px;
+  background-color: #ADFF2F;
+  margin: 0 auto;
+}
+
 .container {
   padding: 10px;
 }
@@ -241,11 +264,37 @@ a {
 
 .album {
   text-align: center;
+  position: relative;
+  max-width: 200px;
+  margin: 0 5px;
+}
+
+.album .overlay {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 10px;
+  opacity: 0;
+}
+
+.album .overlay i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.album:hover {
+  cursor: pointer;
+}
+
+.album:hover .overlay {
+  opacity: 1;
 }
 
 .album > img {
-  width: 200px;
-  margin: 10px 5px;
+  max-width: 200px;
+  height: 200px;
+  margin: 10px 0;
 }
 
 img.circle {
@@ -282,8 +331,18 @@ img.circle {
   margin-right: 30px;
 }
 
+#music-player .player-left .title h4:hover,
+#music-player .player-left .title p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 #music-player .player-left i {
   margin: 0 5px;
+}
+
+#music-player .player-left i:hover {
+  color: white;
 }
 
 #music-player .player-center {
@@ -302,24 +361,60 @@ img.circle {
   vertical-align: middle;
 }
 
+#music-player .player-center .pulsanti i:hover {
+  cursor: pointer;
+}
+
+#music-player .player-center .pulsanti i[class*="play"]:hover {
+  transform: scale(1.1);
+}
+
 #music-player .player-center .play-bar {
   font-size: 10px;
   margin-top: 5px;
 }
 
 .bar {
+  position: relative;
   display: inline-block;
   width: 80%;
-  height: 2px;
+  height: 4px;
   background-color: #5A5A5A;
   vertical-align: middle;
   margin: 0 10px;
 }
 
 .active-bar {
+  position: absolute;
+  top: 0;
+  display: inline-block;
   width: 25%;
-  height: 2px;
+  height: 4px;
   background-color: #C1C1C1;
+}
+
+.round {
+  position:absolute;
+  top: -3px;
+  left: calc(25% - 3px);
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0;
+}
+
+.bar:hover {
+  cursor: pointer;
+}
+
+.bar:hover .active-bar {
+  background-color: #ADFF2F;
+}
+
+.bar:hover .round {
+  opacity: 1;
 }
 
 #music-player .player-right {
