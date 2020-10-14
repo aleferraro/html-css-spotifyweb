@@ -164,7 +164,7 @@ a {
 }
 
 .header-sidebar .playlist {
-  height: 350px;
+  height: 60%;
   overflow: auto;
 }
 
