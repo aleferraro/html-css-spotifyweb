@@ -65,8 +65,12 @@ main {
 
 /* EREDITABLES */
 
-h4 {
+h4, h2 {
   color: white;
+}
+
+h4, p {
+  margin: 5px 0;
 }
 
 a {
@@ -190,13 +194,64 @@ a {
 
 /* MAIN WINDOW */
 
-#main-window .cta {
+#main-window .upgrade {
   position: fixed;
   top: 0;
   right: 0;
   height: 80px;
   width: calc(100% - 200px);
   background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#main-window .upgrade .cta {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-size: 10px;
+  margin-right: 20px;
+}
+
+#main-window .playground {
+  margin-top: 85px;
+}
+
+#main-window .playground .menu {
+  display: flex;
+  justify-content: center;
+}
+
+#main-window .playground .menu > li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.container {
+  padding: 10px;
+}
+
+.flex-container {
+  width: 100%;
+  display: flex;
+}
+
+.album {
+  text-align: center;
+}
+
+.album > img {
+  width: 200px;
+  margin: 10px 5px;
+}
+
+img.circle {
+  border-radius: 50%;
+}
+
+.album p {
+  padding: 0;
 }
 
 /* MUSIC PLAYER */
