@@ -4,89 +4,124 @@
     <meta charset="utf-8">
     <title>SpotifyWeb</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <section id="sidebar">
-      <div class="logo">
-        <img src="img/logo.svg" alt="logo">
-      </div>
-      <div class="side-menu">
-        <ul class="menu">
-          <li>
+    <main>
+      <section id="sidebar">
+        <div class="header-sidebar">
+          <div class="logo">
+            <img src="img/logo.svg" alt="logo">
+          </div>
+          <div class="side-menu">
+            <ul class="menu">
+              <li>
+                <a class="white" href="#">
+                  <img class="menu-icon" src="img/home.svg" alt="home">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img class="menu-icon" src="img/search.svg" alt="search">
+                  Cerca
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img class="menu-icon" src="img/libreria.svg" alt="libreria">
+                  La tua libreria
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="playlist">
+            <h4 class="text-uppercase">playlist</h4>
+            <ul class="menu">
+              <li>
+                <a class="big" href="#">
+                  <div class="button">
+                    +
+                  </div>
+                  Crea Playlist
+                </a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+              <li>
+                <a href="#">Nome Playlist</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-sidebar">
+          <div class="download">
+            <a href="#">
+              <img src="img/download.svg" alt="download">
+              Installa app
+            </a>
+          </div>
+          <div class="profile">
             <a class="white" href="#">
-              <img class="menu-icon" src="img/home.svg" alt="home">
-              Home
+              <img src="img/profile.svg" alt="profile">
+              <strong>Jhon Doe</strong>
             </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="menu-icon" src="img/search.svg" alt="search">
-              Cerca
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img class="menu-icon" src="img/libreria.svg" alt="libreria">
-              La tua libreria
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="playlist">
-        <h4 class="text-uppercase">playlist</h4>
-        <ul class="menu">
-          <li>
-            <a class="big" href="#">
-              <div class="button">
-                +
-              </div>
-              Crea Playlist
-            </a>
-          </li>
-          <li>
-            <a href="#">Nome Playlist</a>
-          </li>
-          <li>
-            <a href="#">Nome Playlist</a>
-          </li>
-          <li>
-            <a href="#">Nome Playlist</a>
-          </li>
-          <li>
-            <a href="#">Nome Playlist</a>
-          </li>
-          <li>
-            <a href="#">Nome Playlist</a>
-          </li>
-          <li>
-            <a href="#">Nome Playlist</a>
-          </li>
-          <li>
-            <a href="#">Nome Playlist</a>
-          </li>
-        </ul>
-      </div>
-      <div class="bottom-sidebar">
-        <div class="download">
-          <a href="#">
-            <img src="img/download.svg" alt="download">
-            Installa app
-          </a>
+          </div>
         </div>
-        <div class="profile">
-          <a class="white" href="#">
-            <img src="img/profile.svg" alt="profile">
-            <strong>Jhon Doe</strong>
-          </a>
+      </section>
+      <section id="main-window">
+        <div class="cta">
+          <!-- <a class="button text-uppercase" href="#">effettua l'upgrade</a> -->
         </div>
-      </div>
-    </section>
-    <section id="main">
-
-    </section>
-    <section id="music-player">
-
-    </section>
+      </section>
+      <section id="music-player">
+        <div class="riproduzione">
+          <img src="img/sinister.jpeg" alt="sinister">
+          <div class="title">
+            <h4>Sinister</h4>
+            <p>Brano nome</p>
+          </div>
+          <a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-folder-o" aria-hidden="true"></i></a>
+        </div>
+        <div class="comandi">
+          <div class="pulsanti white">
+            <i class="fa fa-random" aria-hidden="true"></i>
+            <i class="fa fa-step-backward" aria-hidden="true"></i>
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+            <i class="fa fa-step-forward" aria-hidden="true"></i>
+            <i class="fa fa-repeat" aria-hidden="true"></i>
+          </div>
+          <div class="play-bar white">
+            0:25
+            <div class="bar"></div>
+            4:35
+          </div>
+        </div>
+        <div class="settings white">
+          <i class="fa fa-list" aria-hidden="true"></i>
+          <i class="fa fa-television" aria-hidden="true"></i>
+          <i class="fa fa-volume-up" aria-hidden="true"></i>
+          <div class="bar"></div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
