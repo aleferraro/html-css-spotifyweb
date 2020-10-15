@@ -216,6 +216,7 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 10;
 }
 
 #main-window .upgrade .cta {
@@ -237,6 +238,7 @@ a {
 #main-window .playground .menu {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #main-window .playground .menu > li {
@@ -255,55 +257,64 @@ a {
   margin: 0 auto;
 }
 
-.container {
+#main-window .playground .container {
   padding: 10px;
 }
 
-.flex-container {
+#main-window .playground .flex-container {
   width: 100%;
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.album {
+#main-window .playground .flex-container .album {
   text-align: center;
   position: relative;
-  max-width: 200px;
+  max-width: calc((100% - 60px) / 6);
   margin: 0 5px;
 }
 
-.album .overlay {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  top: 10px;
-  opacity: 0;
+#main-window .playground .flex-container .album .cover {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
 }
 
-.album .overlay i {
+#main-window .playground .flex-container .album .cover .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+#main-window .playground .flex-container .album .cover .overlay i {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.album:hover {
+#main-window .playground .flex-container .album .cover > img {
+  width: 100%;
+}
+
+#main-window .playground .flex-container .album .circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#main-window .playground .flex-container .album:hover {
   cursor: pointer;
 }
 
-.album:hover .overlay {
-  opacity: 1;
+#main-window .playground .flex-container .album:hover .overlay {
+  display: block;
 }
 
-.album > img {
-  max-width: 200px;
-  height: 200px;
-  margin: 10px 0;
-}
-
-img.circle {
-  border-radius: 50%;
-}
-
-.album p {
+#main-window .playground .flex-container .album p {
   padding: 0;
 }
 
@@ -447,6 +458,26 @@ img.circle {
 
 /* MEDIA QUERY */
 
+@media screen and (max-width: 1200px) {
+
+  /* MAIN WINDOW */
+
+  #main-window .playground .flex-container .album {
+    max-width: calc((100% - 40px) / 4);
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+
+  /* MAIN WINDOW */
+
+  #main-window .playground .flex-container .album {
+    max-width: calc((100% - 20px) / 2);
+  }
+
+}
+
 @media screen and (max-width: 768px) {
 
   /* LAYOUT SETTINGS */
@@ -485,5 +516,11 @@ img.circle {
 
   #sidebar .bottom-sidebar .download img {
     margin-right: 0;
+  }
+
+  /* MAIN WINDOW */
+
+  #main-window .playground .flex-container .album {
+    max-width: calc((100% - 20px) / 2);
   }
 }
