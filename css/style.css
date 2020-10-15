@@ -271,7 +271,7 @@ a {
 #main-window .playground .flex-container .album {
   text-align: center;
   position: relative;
-  max-width: calc((100% - 60px) / 6);
+  width: calc((100% - 60px) / 6);
   margin: 0 5px;
 }
 
@@ -463,7 +463,7 @@ a {
   /* MAIN WINDOW */
 
   #main-window .playground .flex-container .album {
-    max-width: calc((100% - 40px) / 4);
+    width: calc((100% - 40px) / 4);
   }
 
 }
@@ -473,7 +473,7 @@ a {
   /* MAIN WINDOW */
 
   #main-window .playground .flex-container .album {
-    max-width: calc((100% - 20px) / 2);
+    width: calc((100% - 20px) / 2);
   }
 
 }
@@ -516,11 +516,5 @@ a {
 
   #sidebar .bottom-sidebar .download img {
     margin-right: 0;
-  }
-
-  /* MAIN WINDOW */
-
-  #main-window .playground .flex-container .album {
-    max-width: calc((100% - 20px) / 2);
   }
 }
