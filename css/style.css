@@ -476,6 +476,24 @@ a {
     width: calc((100% - 20px) / 2);
   }
 
+  /* MUSIC PLAYER */
+
+  #music-player {
+    font-size: 0.7rem;
+  }
+
+  #music-player .player-left .title {
+    margin-right: 5px;
+  }
+
+  #music-player .player-left {
+    width: 200px;
+  }
+
+  #music-player .player-right {
+    width: 200px;
+  }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -516,5 +534,19 @@ a {
 
   #sidebar .bottom-sidebar .download img {
     margin-right: 0;
+  }
+
+  /* MUSIC PLAYER */
+
+  #music-player .player-left {
+    width: 30%;
+  }
+
+  #music-player .player-right {
+    width: 30%;
+  }
+
+  #music-player .player-right .bar {
+    width: 40%;
   }
 }
